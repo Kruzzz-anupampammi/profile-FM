@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black !important;
+  font-family: "Space Grotesk", sans-serif !important;
+}
+
+.navbar {
+  margin-top: 20px;
+}
+
+.navbar-brand {
+  font-size: 25px !important;
+  margin: 0 10px 5px 10px;
+}
+
+.menu {
+  display: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #7e7e7e;
+}
+
+.fa-brands,
+.fa-solid {
+  margin: 10px;
+  cursor: pointer;
+}
+.fa-brands:hover,
+.fa-solid:hover {
+  color: #fcde59 !important;
+}
+/* HERO STYLES */
+#hero {
+  background: radial-gradient(circle, transparent 25%, #000000 26%),
+    linear-gradient(
+      0deg,
+      transparent 44%,
+      #101010 45%,
+      #101010 55%,
+      transparent 56%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 44%,
+      #101010 45%,
+      #101010 55%,
+      transparent 56%
+    );
+  background-size: 2em 2em;
+  background-color: #000000;
+  opacity: 1;
+}
+
+.hero_image {
+  height: 400px;
+  width: 400px;
+}
+
+.img_grow img {
+  transition: 1s ease;
+}
+
+.img_grow img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 1.5s ease;
+}
+
+.hero_head {
+  color: white;
+  line-height: 5;
+  margin-bottom: 5px;
+}
+
+.myName {
+  border-bottom: 3px solid #fcde59;
+}
+
+.hero_desc {
+  color: #7e7e7e;
+}
+
+.btn {
+  color: white !important;
+  font-size: 18px !important;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffedd3;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  margin-bottom: 10px;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffc506;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  color: #1e1e2b;
+  transition-delay: 0.5s;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ffc506;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+/* SKILLS STYLES */
+#skills {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.skills_desc {
+  color: #7e7e7e !important;
+}
+
+/* PROJECTS STYLES */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  grid-auto-rows: 380px;
+}
+
+.card {
+  width: 350px;
+  padding: 10px;
+  background-color: black !important;
+  color: white !important;
+}
+
+.card .pro_image {
+  height: 220px;
+  -webkit-filter: grayscale(0) blur(0);
+  filter: grayscale(0) blur(0);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.card .pro_image:hover {
+  -webkit-filter: grayscale(50%) blur(3px);
+  filter: grayscale(50%) blur(3px);
+}
+
+.pro_6 .card {
+  width: 400px;
+}
+
+.cta {
+  position: relative;
+  align-items: center;
+  margin: 80px 95px 0 95px;
+  padding: 10px 10px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 30px;
+  background: #b1dae7;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+/* CONTACTME STYLES */
+#contactme {
+  background: radial-gradient(circle, #171717 10%, transparent 11%),
+    radial-gradient(circle at bottom left, #171717 5%, transparent 6%),
+    radial-gradient(circle at bottom right, #171717 5%, transparent 6%),
+    radial-gradient(circle at top left, #171717 5%, transparent 6%),
+    radial-gradient(circle at top right, #171717 5%, transparent 6%);
+  background-size: 3em 3em;
+  background-color: #000000;
+  opacity: 1;
+}
+
+.form_contact {
+  height: 50px;
+  width: 350px;
+  margin: 10px;
+  background-color: black;
+  color: white !important;
+  text-decoration: none;
+  border: none;
+  border-bottom: 3px solid gray;
+}
+.form_contact:focus {
+  outline: none;
+  box-shadow: none;
+}
+#textarea {
+  height: 90px;
+}
+
+/* FOOTER STYLES */
+#footer {
+  background: radial-gradient(circle, #171717 10%, transparent 11%),
+    radial-gradient(circle at bottom left, #171717 5%, transparent 6%),
+    radial-gradient(circle at bottom right, #171717 5%, transparent 6%),
+    radial-gradient(circle at top left, #171717 5%, transparent 6%),
+    radial-gradient(circle at top right, #171717 5%, transparent 6%);
+  background-size: 3em 3em;
+  background-color: #000000;
+  opacity: 1;
+  margin-top: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    text-align: center !important;
+    margin: 0 4%;
+    width: 100%;
+  }
+  .hero_image {
+    margin: 0 25%;
+    height: 200px;
+    width: 200px;
+  }
+  .hero_txt {
+    text-align: center !important;
+    color: white !important;
+    line-height: 2px;
+  }
+
+  #Sills {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center !important;
+  }
+
+  #projects {
+    margin: 0 5.6% !important;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+    grid-auto-rows: 380px;
+  }
+  #footer {
+    margin: 0 5%;
+  }
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1024px) {
+  body {
+    width: 100% !important;
+    margin: 0 10%;
+    text-align: center !important;
+  }
+  .col-md {
+    display: none !important;
+  }
+  #hero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .hero_image {
+    margin: 0 35%;
+    height: 300px;
+    width: 300px;
+  }
+  .card {
+    width: 350px;
+    height: 100px;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-auto-rows: 350px;
+  }
+  .viewbox {
+    display: none;
+  }
+  .cta {
+    padding: 15px 18px;
+  }
+  .cta:before {
+    width: 50px;
+    height: 50px;
+  }
+  .cta span {
+    font-size: 16px;
+  }
+  .form_contact {
+    width: 500px;
+  }
+}
